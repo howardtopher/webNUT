@@ -8,6 +8,8 @@
 					<th data-sortable="true" data-field="descriptions">Description</th>
 					<th data-sortable="true" data-field="status">Status</th>
 					<th data-sortable="true" data-field="battery">Battery</th>
+					<th data-sortable="true" data-field="contact">Contact</th>
+					<th data-sortable="true" data-field="serial">Serial</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -18,6 +20,8 @@
 					<td>${ups_list[ups]['description']}</td>
 					<td>${ups_list[ups]['status']}</td>
 					<td>${ups_list[ups]['battery']}%</td>
+					<td>${ups_list[ups]['contact']}</td>
+					<td>${ups_list[ups]['serial']}</td>
 				</tr>
 			</tbody>
 		</table>

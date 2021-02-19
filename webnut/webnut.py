@@ -25,6 +25,15 @@ class WebNUT(object):
                         'status': self._get_ups_status(ups_vars),
                         'battery': ups_vars['battery.charge'],
                     }
+
+                    if 'device.contact' in ups_vars:
+                        ups_list[ups]['contact'] = ups_vars['device.contact']
+                    else:
+                        ups_list[ups]['contact'] = 'N/A'
+                    if 'device.serial' in ups_vars:
+                        ups_list[ups]['serial'] = ups_vars['device.serial']
+                    else:
+                        ups_list[ups]['serial'] = 'N/A'
                 return ups_list
         except nut2.PyNUTError:
             return dict()
